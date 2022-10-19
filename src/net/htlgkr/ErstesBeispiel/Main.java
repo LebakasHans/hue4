@@ -20,19 +20,7 @@ public class Main {
         List<Integer> chunk;
         int lastIndex = 0;
         int magicNumber = numbers.size()/chunks;
-        /*
-        int[][] chunkIndexes = new int[chunks][2];
-        for (int i = 0; i < chunks-1;) {
-            chunkIndexes[i][0] = lastIndex;
-            chunkIndexes[i][1] = magicNumber * (i+1);
 
-            lastIndex = (magicNumber * (i))+1;
-        }
-        chunkIndexes[chunkIndexes.length-1][0] = lastIndex;
-        chunkIndexes[chunkIndexes.length-1][1] = numbers.size()-1;
-        System.out.println();
-
-         */
         for (int i = 0; i < chunks;) {
             if(i == chunks-1){
             chunk = numbers.subList(lastIndex, numbers.size()-1);
